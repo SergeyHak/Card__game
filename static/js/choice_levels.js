@@ -1,10 +1,10 @@
 window.application = {
   blocks: {},
   screens: {},
-  token: null,
-  idGame: null,
+  watch: null,
   timers: [],
-  rival: null,
+  levels: null,
+  cards: [],
   container: document.querySelector(".app"),
   renderScreen: function (screenName) {
     window.application.timers.forEach((element) => {
@@ -24,14 +24,25 @@ window.application = {
       this.blocks[blockName](window.application.container);
     }
   },
+  // renderCards: function(){
+  //   if(window.application.levels === 1){
+  //     function sortCards() {
+  //       return window.application.cards.sort(function () {
+  //         return 0.5 - Math.random();
+  //       });
+  //     }
+  //     sortCards(arr);
+  //   }
+  //   for(let i=0; i<window.application.cards.length; i++){
+  //     cards.appendChild(window.application.cards[i]);
+  //       window.application.container.appendChild(cards);
+  //   }  
+  // }  
 };
 //Отрисовка первого блока
 function renderChoiceLevel() {
-  // const div = document.createElement('div');
-  // div.classList = 'div';
   const choice = document.createElement("div");
   choice.classList = "choice_level";
-
   const title = document.createElement("h1");
   title.classList = "title";
   title.textContent = "Выбери сложность";
@@ -49,14 +60,37 @@ function renderChoiceLevel() {
   const startButton = document.createElement("button");
   startButton.classList = "start";
   startButton.textContent = "Старт";
+  startButton.disabled = true;
   choice.appendChild(title);
   level.appendChild(easyButton);
   level.appendChild(normalButton);
   level.appendChild(hardButton);
   choice.appendChild(level);
   choice.appendChild(startButton);
-  // div.appendChild(choice);
   window.application.container.appendChild(choice);
+  level.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target.tagName === "BUTTON") {
+      const innerText = target.textContent;
+      if (innerText === "1") {
+        window.application.levels = innerText;
+      } else if (innerText === "2") {
+        window.application.levels = innerText;
+      } else if (innerText === "3") {
+        window.application.levels = innerText;
+      }
+    }
+    startButton.disabled = false;
+    startButton.classList.add("start_active");
+    console.log(`Уровень сложности - ${window.application.levels}`);
+  });
+
+  startButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    if(window.application.levels === '1'){
+      window.application.renderScreen("render_game"); // Отрисовывает страницу простой игры -->
+    }
+  });
 }
 window.application.blocks["choice_level"] = renderChoiceLevel; // Добавляем в блок
 function renderChoiceLevelScreen() {
