@@ -1,3 +1,11 @@
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable block-opening-brace-space-before */
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 /* stylelint-disable font-family-name-quotes */
 /* stylelint-disable rule-empty-line-before */
 /* stylelint-disable indentation */
@@ -17,7 +25,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    font-feature-settings: "pnum" on, "lnum" on;
+    font-feature-settings: "pnum"on, "lnum"on;
     color: white;
     margin-top: 52px;
     margin-right: 22px;
@@ -37,29 +45,25 @@
     color: white;
 }
 
-.tenB {
-    width: 17.11px;
-    height: 25.58px;
-    left: 33px;
-    top: 80px;
-    background: #c4c4c4;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+.front, .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
 }
 
-.tenK {
-    width: 17.11px;
-    height: 25.58px;
-    left: 33px;
-    top: 80px;
-    background: #c4c4c4;
-    transform: matrix(1, 0, 0, -1, 0, 0);
+.ten {
+    width: 90px;
+    height: 130px;
+    position: relative;
+    perspective: 1000px;
 }
-.cards {
-    width: 1024px;
-    height: 640px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-left: 22px;
-    justify-content: center;
+
+ .back_rotate {
+    transform: rotateY(180deg);
 }

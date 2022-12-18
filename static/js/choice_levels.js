@@ -5,6 +5,7 @@ window.application = {
     timers: [],
     levels: null,
     cards: [],
+    idCards: [],
     container: document.querySelector(".app"), //Основной контейнер
     cardsScreen: document.querySelector(".cards"), //Контейнер для отрисовки экранов сложности
     renderScreen: function (screenName) {
@@ -26,8 +27,8 @@ window.application = {
             this.blocks[blockName](window.application.container)
         }
     },
-    easyLevel: function () {
-        for (let i = 0; i < window.application.cards.length; i++) {
+    easyLevelScreen: function () {
+        for (let i = 12; i < window.application.cards.length; i++) {
             window.application.cardsScreen.appendChild(
                 window.application.cards[i]
             )
@@ -36,8 +37,8 @@ window.application = {
             )
         }
     },
-    normalLevel: function () {
-        for (let i = 0; i < window.application.cards.length; i++) {
+    normalLevelScreen: function () {
+        for (let i = 6; i < window.application.cards.length; i++) {
             window.application.cardsScreen.appendChild(
                 window.application.cards[i]
             )
@@ -46,7 +47,7 @@ window.application = {
             )
         }
     },
-    hardLevel: function () {
+    hardLevelScreen: function () {
         for (let i = 0; i < window.application.cards.length; i++) {
             window.application.cardsScreen.appendChild(
                 window.application.cards[i]
@@ -104,9 +105,12 @@ function renderChoiceLevel() {
     })
 
     startButton.addEventListener("click", (event) => {
-        event.preventDefault()
         if (window.application.levels === "1") {
-            window.application.renderScreen("render_game") // Отрисовывает страницу простой игры -->
+            window.application.renderScreen("render_easy_game") // Отрисовывает страницу простой игры -->
+        } else if (window.application.levels === "2") {
+            window.application.renderScreen("render_normal_game") // Отрисовывает страницу нормальной игры -->
+        } else {
+            window.application.renderScreen("render_hard_game") // Отрисовывает страницу сложной игры -->
         }
     })
 }
