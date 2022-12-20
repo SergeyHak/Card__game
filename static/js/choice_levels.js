@@ -1,22 +1,24 @@
 window.application = {
     blocks: {},
     screens: {},
-    watch: null,
+    watch: [],
     timers: [],
     levels: null,
     cards: [],
     idCards: [],
     container: document.querySelector(".app"), //Основной контейнер
+    winLoseScreen: document.querySelector(".win_lose_screen"),
     cardsScreen: document.querySelector(".cards"), //Контейнер для отрисовки экранов сложности
     renderScreen: function (screenName) {
-        window.application.timers.forEach((element) => {
-            clearInterval(element)
+        window.application.watch.forEach((element) => {
+            clearTimeout(element)
         })
         if (!window.application.screens[screenName]) {
             console.warn("Такой страницы нет")
         } else {
             window.application.container.innerHTML = ""
             window.application.cardsScreen.innerHTML = ""
+            window.application.winLoseScreen.innerHTML = ""
             this.screens[screenName]()
         }
     },
@@ -93,10 +95,19 @@ function renderChoiceLevel() {
             const innerText = target.textContent
             if (innerText === "1") {
                 window.application.levels = innerText
+                target.classList.add("color")
+                normalButton.classList.remove("color")
+                hardButton.classList.remove("color")
             } else if (innerText === "2") {
                 window.application.levels = innerText
+                target.classList.add("color")
+                easyButton.classList.remove("color")
+                hardButton.classList.remove("color")
             } else if (innerText === "3") {
                 window.application.levels = innerText
+                target.classList.add("color")
+                easyButton.classList.remove("color")
+                normalButton.classList.remove("color")
             }
         }
         startButton.disabled = false
@@ -116,6 +127,6 @@ function renderChoiceLevel() {
 }
 window.application.blocks["choice_level"] = renderChoiceLevel // Добавляем в блок
 function renderChoiceLevelScreen() {
-    window.application.renderBlock("choice_level") // Должен вызвать window.application.blocks['example-button'](), передавая туда объект-узел
+    window.application.renderBlock("choice_level")
 }
 window.application.screens["renderLevel"] = renderChoiceLevelScreen // Записываем функцию в поле объекта
