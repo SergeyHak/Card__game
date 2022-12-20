@@ -1,4 +1,15 @@
-.content {    
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable block-opening-brace-space-before */
+/* stylelint-disable no-missing-end-of-source-newline */
+/* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable indentation */
+.content {
     display: flex;
     justify-content: space-between;
 }
@@ -6,15 +17,16 @@
 .reset_game {
     width: 246px;
     height: 50px;
-    background: #7AC100;
+    background: #7ac100;
     border-radius: 12px;
-    font-family: 'StratosSkyeng';
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "StratosSkyeng";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
-    font-feature-settings: 'pnum'on, 'lnum'on;
-    color: #FFFFFF;
+    font-feature-settings: "pnum"on, "lnum"on;
+    color: white;
     margin-top: 52px;
     margin-right: 22px;
 }
@@ -24,36 +36,34 @@
     height: 72px;
     margin-left: 22px;
     margin-top: 41px;
-    font-family: 'StratosSkyeng';
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+    font-family: "StratosSkyeng";
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
     line-height: 72px;
-    color: #FFFFFF;
+    color: white;
 }
 
-.tenB {
-    width: 17.11px;
-    height: 25.58px;
-    left: 33px;
-    top: 80px;
-    background: #C4C4C4;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
-.tenK {
-    width: 17.11px;
-    height: 25.58px;
-    left: 33px;
-    top: 80px;
-    background: #C4C4C4;
-    transform: matrix(1, 0, 0, -1, 0, 0);
-}
-.cards{
-    width: 1024px;
-    height: 640px;
+.front, .back {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-left: 22px;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.ten {
+    width: 90px;
+    height: 130px;
+    position: relative;
+    perspective: 1000px;
+}
+
+ .back_rotate {
+    transform: rotateY(180deg);
 }
