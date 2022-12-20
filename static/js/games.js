@@ -1,7 +1,16 @@
-/* eslint-disable prettier/prettier */
 function renderGameBlok() {
     const timeButton = document.createElement("div")
     timeButton.classList = "content"
+    const infoTim = document.createElement("div")
+    infoTim.classList = "infotime"
+    const minSek = document.createElement("div")
+    minSek.classList = "minsek"
+    const mins = document.createElement("h3")
+    mins.textContent = "min"
+    mins.classList = "mins"
+    const sek = document.createElement("h3")
+    sek.textContent = "sek"
+    sek.classList = "sek"
     const timers = document.createElement("h1")
     timers.classList = "time"
     const time = document.createElement("time")
@@ -9,8 +18,12 @@ function renderGameBlok() {
     const resetButton = document.createElement("button")
     resetButton.classList = "reset_game"
     resetButton.textContent = "Играть заново"
+    minSek.appendChild(mins)
+    minSek.appendChild(sek)
     timers.appendChild(time)
-    timeButton.appendChild(timers)
+    infoTim.appendChild(minSek)
+    infoTim.appendChild(timers)
+    timeButton.appendChild(infoTim)
     timeButton.appendChild(resetButton)
     window.application.container.appendChild(timeButton)
     const stopwatch = document.getElementsByTagName("h1")[0]
@@ -32,17 +45,21 @@ function renderGameBlok() {
         stopwatch.textContent =
             (min > 9 ? min : "0" + min) + "." + (sec > 9 ? sec : "0" + sec)
         timer()
+        window.application.timers = stopwatch.textContent
+        console.log(`Время на игру - ${window.application.timers}`)
     }
+
     function timer() {
-        t = setTimeout(addT, 1000)
+        window.application.watch.push(setTimeout(addT, 1000))
     }
     setTimeout(() => {
-        timer() 
-    }, 5000);
+        timer()
+    }, 5000)
+
     resetButton.addEventListener("click", () => {
-        window.application.watch = stopwatch.innerText
-        window.application.idCards = []
+        clearTimeout(t)
         console.log(`Время на игру - ${window.application.watch}`)
+        window.application.idCards = []
         window.application.renderScreen("renderLevel") // Отрисовывает первую страницу -->
     })
 }
@@ -321,15 +338,6 @@ function renderHardBlock() {
         rotateCards(arrBack)
     }, 5000)
 }
-function comparison() {
-    if (window.application.idCards[0] === window.application.idCards[1]) {
-        alert("Вы выиграли")
-        window.application.idCards = []
-    } else {
-        alert("Вы проиграли")
-        window.application.idCards = []
-    }
-}
 window.application.cardsScreen.addEventListener("click", (event) => {
     const target = event.target
     if (target.tagName === "IMG") {
@@ -341,6 +349,15 @@ window.application.cardsScreen.addEventListener("click", (event) => {
     }
     console.log(window.application.idCards)
 })
+function comparison() {
+    if (window.application.idCards[0] === window.application.idCards[1]) {
+        window.application.idCards = []
+        window.application.renderScreen("renderWin")
+    } else {
+        window.application.idCards = []
+        window.application.renderScreen("renderLose")
+    }
+}
 window.application.blocks["hard_block"] = renderHardBlock // Добавляем в блок
 //Отрисовка простого экрана игры
 function renderEasyGameScreen() {
@@ -363,3 +380,43 @@ function renderHardGameScreen() {
     window.application.hardLevelScreen()
 }
 window.application.screens["render_hard_game"] = renderHardGameScreen // Добавляем в экраны
+
+//     var h1 = document.getElementsByTagName('h1')[0];
+// var start = document.getElementById('strt');
+// var stop = document.getElementById('stp');
+// var reset = document.getElementById('rst');
+// var sec = 0;
+// var min = 0;
+// var hrs = 0;
+// var t;
+
+// function tick(){
+//     sec++;
+//     if (sec >= 60) {
+//         sec = 0;
+//         min++;
+//         if (min >= 60) {
+//             min = 0;
+//             hrs++;
+//         }
+//     }
+// }
+// function add() {
+//     tick();
+//     h1.textContent = (hrs > 9 ? hrs : "0" + hrs)
+//         	 + ":" + (min > 9 ? min : "0" + min)
+//        		 + ":" + (sec > 9 ? sec : "0" + sec);
+//     timer();
+// }
+// function timer() {
+//     t = setTimeout(add, 1000);
+// }
+
+// timer();
+// start.onclick = timer;
+// stop.onclick = function() {
+//     clearTimeout(t);
+// }
+// reset.onclick = function() {
+//     h1.textContent = "00:00:00";
+//     seconds = 0; minutes = 0; hours = 0;
