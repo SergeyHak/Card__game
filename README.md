@@ -1,4 +1,4 @@
-# Карточная игра :black_joker
+# Карточная игра :black_joker:
 ![npm](https://img.shields.io/npm/v/npm?color=green)
 ## Как играть:question:
 + Перед вами окно выбора уровня сложности, выбираем нужный и нажимаем **Старт**:loudspeaker:
