@@ -35,7 +35,7 @@ export const application: any = {
 
   easyLevelScreen: function () {    
     let cardsSort = []
-    for (let i = 15; i < this.cards.length; i++) {
+    for (let i = 33; i < this.cards.length; i++) {
       cardsSort.push(this.cards[i])
       this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)
@@ -57,7 +57,7 @@ export const application: any = {
 
   normalLevelScreen: function () {
     let cardsSort = []
-    for (let i = 12; i < this.cards.length; i++) {
+    for (let i = 30; i < this.cards.length; i++) {
       cardsSort.push(this.cards[i])
       this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)
@@ -79,7 +79,7 @@ export const application: any = {
 
   hardLevelScreen: function () {
     let cardsSort = []
-    for (let i = 9; i < this.cards.length; i++) {
+    for (let i = 27; i < this.cards.length; i++) {
       cardsSort.push(this.cards[i])
       this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)

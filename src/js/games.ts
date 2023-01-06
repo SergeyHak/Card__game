@@ -92,9 +92,35 @@ function renderHardBlock() {
     ten2X.src = shirt
     ten2X.classList.add("back")
     ten2X.classList.add("back_rotate")
-    ten2X.id = "10"
+    ten2X.id = "102"
     ten2.appendChild(tenK)
     ten2.appendChild(ten2X)
+
+    const ten3 = document.createElement("div")
+    ten3.classList.add("ten")
+    const tenP = document.createElement("img")
+    tenP.src = "../static/img/cards/ten-piki.png"
+    tenP.classList.add("front")
+    const ten3X = document.createElement("img")
+    ten3X.src = shirt
+    ten3X.classList.add("back")
+    ten3X.classList.add("back_rotate")
+    ten3X.id = "103"
+    ten3.appendChild(tenP)
+    ten3.appendChild(ten3X)
+
+    const ten4 = document.createElement("div")
+    ten4.classList.add("ten")
+    const tenC = document.createElement("img")
+    tenC.src = "../static/img/cards/ten-chervi.png"
+    tenC.classList.add("front")
+    const ten4X = document.createElement("img")
+    ten4X.src = shirt
+    ten4X.classList.add("back")
+    ten4X.classList.add("back_rotate")
+    ten4X.id = "104"
+    ten4.appendChild(tenC)
+    ten4.appendChild(ten4X)
 
     const nine = document.createElement("div")
     nine.classList.add("ten")
@@ -118,9 +144,35 @@ function renderHardBlock() {
     nine2X.src = shirt
     nine2X.classList.add("back")
     nine2X.classList.add("back_rotate")
-    nine2X.id = "9"
+    nine2X.id = "92"
     nine2.appendChild(nineK)
     nine2.appendChild(nine2X)
+
+    const nine3 = document.createElement("div")
+    nine3.classList.add("ten")
+    const nineP = document.createElement("img")
+    nineP.src = "../static/img/cards/nine-piki.png"
+    nineP.classList.add("front")
+    const nine3X = document.createElement("img")
+    nine3X.src = shirt
+    nine3X.classList.add("back")
+    nine3X.classList.add("back_rotate")
+    nine3X.id = "93"
+    nine3.appendChild(nineP)
+    nine3.appendChild(nine3X)
+
+    const nine4 = document.createElement("div")
+    nine4.classList.add("ten")
+    const nineC = document.createElement("img")
+    nineC.src = "../static/img/cards/nine-chervi.png"
+    nineC.classList.add("front")
+    const nine4X = document.createElement("img")
+    nine4X.src = shirt
+    nine4X.classList.add("back")
+    nine4X.classList.add("back_rotate")
+    nine4X.id = "94"
+    nine4.appendChild(nineC)
+    nine4.appendChild(nine4X)
 
     const eight = document.createElement("div")
     eight.classList.add("ten")
@@ -144,10 +196,35 @@ function renderHardBlock() {
     eight2X.src = shirt
     eight2X.classList.add("back")
     eight2X.classList.add("back_rotate")
-
-    eight2X.id = "8"
+    eight2X.id = "82"
     eight2.appendChild(eightB)
     eight2.appendChild(eight2X)
+
+    const eight3 = document.createElement("div")
+    eight3.classList.add("ten")
+    const eightP = document.createElement("img")
+    eightP.src = "../static/img/cards/eight-piki.png"
+    eightP.classList.add("front")
+    const eight3X = document.createElement("img")
+    eight3X.src = shirt
+    eight3X.classList.add("back")
+    eight3X.classList.add("back_rotate")
+    eight3X.id = "83"
+    eight3.appendChild(eightP)
+    eight3.appendChild(eight3X)
+
+    const eight4 = document.createElement("div")
+    eight4.classList.add("ten")
+    const eightC = document.createElement("img")
+    eightC.src = "../static/img/cards/eight-chervi.png"
+    eightC.classList.add("front")
+    const eight4X = document.createElement("img")
+    eight4X.src = shirt
+    eight4X.classList.add("back")
+    eight4X.classList.add("back_rotate")
+    eight4X.id = "84"
+    eight4.appendChild(eightC)
+    eight4.appendChild(eight4X)
 
     const seven = document.createElement("div")
     seven.classList.add("ten")
@@ -171,9 +248,35 @@ function renderHardBlock() {
     seven2X.src = shirt
     seven2X.classList.add("back")
     seven2X.classList.add("back_rotate")
-    seven2X.id = "7"
+    seven2X.id = "72"
     seven2.appendChild(sevenK)
     seven2.appendChild(seven2X)
+
+    const seven3 = document.createElement("div")
+    seven3.classList.add("ten")
+    const sevenP = document.createElement("img")
+    sevenP.src = "../static/img/cards/seven-piki.png"
+    sevenP.classList.add("front")
+    const seven3X = document.createElement("img")
+    seven3X.src = shirt
+    seven3X.classList.add("back")
+    seven3X.classList.add("back_rotate")
+    seven3X.id = "73"
+    seven3.appendChild(sevenP)
+    seven3.appendChild(seven3X)
+
+    const seven4 = document.createElement("div")
+    seven4.classList.add("ten")
+    const sevenC = document.createElement("img")
+    sevenC.src = "../static/img/cards/seven-chervi.png"
+    sevenC.classList.add("front")
+    const seven4X = document.createElement("img")
+    seven4X.src = shirt
+    seven4X.classList.add("back")
+    seven4X.classList.add("back_rotate")
+    seven4X.id = "74"
+    seven4.appendChild(sevenC)
+    seven4.appendChild(seven4X)
 
     const six = document.createElement("div")
     six.classList.add("ten")
@@ -197,9 +300,35 @@ function renderHardBlock() {
     six2X.src = shirt
     six2X.classList.add("back")
     six2X.classList.add("back_rotate")
-    six2X.id = "6"
+    six2X.id = "62"
     six2.appendChild(sixK)
     six2.appendChild(six2X)
+
+    const six3 = document.createElement("div")
+    six3.classList.add("ten")
+    const sixP = document.createElement("img")
+    sixP.src = "../static/img/cards/six-piki.png"
+    sixP.classList.add("front")
+    const six3X = document.createElement("img")
+    six3X.src = shirt
+    six3X.classList.add("back")
+    six3X.classList.add("back_rotate")
+    six3X.id = "63"
+    six3.appendChild(sixP)
+    six3.appendChild(six3X)
+
+    const six4 = document.createElement("div")
+    six4.classList.add("ten")
+    const sixC = document.createElement("img")
+    sixC.src = "../static/img/cards/six-chervi.png"
+    sixC.classList.add("front")
+    const six4X = document.createElement("img")
+    six4X.src = shirt
+    six4X.classList.add("back")
+    six4X.classList.add("back_rotate")
+    six4X.id = "64"
+    six4.appendChild(sixC)
+    six4.appendChild(six4X)
 
     const valet = document.createElement("div")
     valet.classList.add("ten")
@@ -223,9 +352,35 @@ function renderHardBlock() {
     valet2X.src = shirt
     valet2X.classList.add("back")
     valet2X.classList.add("back_rotate")
-    valet2X.id = "v"
+    valet2X.id = "v2"
     valet2.appendChild(valetK)
     valet2.appendChild(valet2X)
+
+    const valet3 = document.createElement("div")
+    valet3.classList.add("ten")
+    const valetP = document.createElement("img")
+    valetP.src = "../static/img/cards/valet-piki.png"
+    valetP.classList.add("front")
+    const valet3X = document.createElement("img")
+    valet3X.src = shirt
+    valet3X.classList.add("back")
+    valet3X.classList.add("back_rotate")
+    valet3X.id = "v3"
+    valet3.appendChild(valetP)
+    valet3.appendChild(valet3X)
+
+    const valet4 = document.createElement("div")
+    valet4.classList.add("ten")
+    const valetC = document.createElement("img")
+    valetC.src = "../static/img/cards/valet-chervi.png"
+    valetC.classList.add("front")
+    const valet4X = document.createElement("img")
+    valet4X.src = shirt
+    valet4X.classList.add("back")
+    valet4X.classList.add("back_rotate")
+    valet4X.id = "v4"
+    valet4.appendChild(valetC)
+    valet4.appendChild(valet4X)
 
     const queen = document.createElement("div")
     queen.classList.add("ten")
@@ -249,9 +404,35 @@ function renderHardBlock() {
     queen2X.src = shirt
     queen2X.classList.add("back")
     queen2X.classList.add("back_rotate")
-    queen2X.id = "q"
+    queen2X.id = "q2"
     queen2.appendChild(queenK)
     queen2.appendChild(queen2X)
+
+    const queen3 = document.createElement("div")
+    queen3.classList.add("ten")
+    const queenP = document.createElement("img")
+    queenP.src = "../static/img/cards/queen-piki.png"
+    queenP.classList.add("front")
+    const queen3X = document.createElement("img")
+    queen3X.src = shirt
+    queen3X.classList.add("back")
+    queen3X.classList.add("back_rotate")
+    queen3X.id = "q3"
+    queen3.appendChild(queenP)
+    queen3.appendChild(queen3X)
+
+    const queen4 = document.createElement("div")
+    queen4.classList.add("ten")
+    const queenC = document.createElement("img")
+    queenC.src = "../static/img/cards/queen-chervi.png"
+    queenC.classList.add("front")
+    const queen4X = document.createElement("img")
+    queen4X.src = shirt
+    queen4X.classList.add("back")
+    queen4X.classList.add("back_rotate")
+    queen4X.id = "q4"
+    queen4.appendChild(queenC)
+    queen4.appendChild(queen4X)
 
     const king = document.createElement("div")
     king.classList.add("ten")
@@ -275,9 +456,35 @@ function renderHardBlock() {
     king2X.src = shirt
     king2X.classList.add("back")
     king2X.classList.add("back_rotate")
-    king2X.id = "k"
+    king2X.id = "k2"
     king2.appendChild(kingK)
     king2.appendChild(king2X)
+
+    const king3 = document.createElement("div")
+    king3.classList.add("ten")
+    const kingP = document.createElement("img")
+    kingP.src = "../static/img/cards/king-piki.png"
+    kingP.classList.add("front")
+    const king3X = document.createElement("img")
+    king3X.src = shirt
+    king3X.classList.add("back")
+    king3X.classList.add("back_rotate")
+    king3X.id = "k3"
+    king3.appendChild(kingP)
+    king3.appendChild(king3X)
+
+    const king4 = document.createElement("div")
+    king4.classList.add("ten")
+    const kingC = document.createElement("img")
+    kingC.src = "../static/img/cards/king-chervi.png"
+    kingC.classList.add("front")
+    const king4X = document.createElement("img")
+    king4X.src = shirt
+    king4X.classList.add("back")
+    king4X.classList.add("back_rotate")
+    king4X.id = "k4"
+    king4.appendChild(kingC)
+    king4.appendChild(king4X)
 
     const As = document.createElement("div")
     As.classList.add("ten")
@@ -301,29 +508,72 @@ function renderHardBlock() {
     As2X.src = shirt
     As2X.classList.add("back")
     As2X.classList.add("back_rotate")
-
-    As2X.id = "a"
+    As2X.id = "a2"
     As2.appendChild(AsK)
     As2.appendChild(As2X)
+
+    const As3 = document.createElement("div")
+    As3.classList.add("ten")
+    const AsP = document.createElement("img")
+    AsP.src = "../static/img/cards/as-piki.png"
+    AsP.classList.add("front")
+    const As3X = document.createElement("img")
+    As3X.src = shirt
+    As3X.classList.add("back")
+    As3X.classList.add("back_rotate")
+    As3X.id = "a3"
+    As3.appendChild(AsP)
+    As3.appendChild(As3X)
+
+    const As4 = document.createElement("div")
+    As4.classList.add("ten")
+    const AsC = document.createElement("img")
+    AsC.src = "../static/img/cards/as-chervi.png"
+    AsC.classList.add("front")
+    const As4X = document.createElement("img")
+    As4X.src = shirt
+    As4X.classList.add("back")
+    As4X.classList.add("back_rotate")
+    As4X.id = "a4"
+    As4.appendChild(AsC)
+    As4.appendChild(As4X)
     let arr = [
         ten,
         ten2,
+        ten3,
+        ten4,
         nine,
         nine2,
+        nine3,
+        nine4,
         eight,
         eight2,
+        eight3,
+        eight4,
         seven,
         seven2,
+        seven3,
+        seven4,
         six,
         six2,
+        six3,
+        six4,
         valet,
         valet2,
+        valet3,
+        valet4,
         queen,
         queen2,
+        queen3,
+        queen4,
         king,
         king2,
+        king3,
+        king4,
         As,
         As2,
+        As3,
+        As4
     ]
     function sortCards(arr: any[]) {
         return arr.sort(function () {
@@ -336,22 +586,40 @@ function renderHardBlock() {
     let arrBack = [
         tenX,
         ten2X,
+        ten3X,
+        ten4X,
         nineX,
         nine2X,
+        nine3X,
+        nine4X,
         eightX,
         eight2X,
+        eight3X,
+        eight4X,
         sevenX,
         seven2X,
+        seven3X,
+        seven4X,
         sixX,
         six2X,
+        six3X,
+        six4X,
         valetX,
         valet2X,
+        valet3X,
+        valet4X,
         queenX,
         queen2X,
+        queen3X,
+        queen4X,
         kingX,
         king2X,
+        king3X,
+        king4X,
         AsX,
         As2X,
+        As3X,
+        As4X
     ]
     function rotateCards(arrBack: string | any[]) {
         for (let i = 0; i < arrBack.length; i++) {
