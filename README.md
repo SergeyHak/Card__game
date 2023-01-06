@@ -1,3 +1,14 @@
+# Карточная игра :black_joker
+![npm](https://img.shields.io/npm/v/npm?color=green) 
+___
+### Для запуска режима сборки production версии
+```
+npm run build
+```
+### Для старта игры
+```
+npm run start
+```
 # Карточная игра :black_joker:
 ![npm](https://img.shields.io/npm/v/npm?color=green)
 ## Как играть:question:
