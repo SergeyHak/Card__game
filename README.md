@@ -9,6 +9,8 @@ npm run build
 ```
 npm run start
 ```
+# Карточная игра :black_joker:
+![npm](https://img.shields.io/npm/v/npm?color=green)
 ## Как играть:question:
 + Перед вами окно выбора уровня сложности, выбираем нужный и нажимаем **Старт**:loudspeaker:
   ![choice_level](src/static/img/cards/Card_game%20-%20Google%20Chrome%202023-01-05%2013.48.20.png)
