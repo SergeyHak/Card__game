@@ -6,8 +6,6 @@ export const application: any = {
   levels: null,
   cards: [],
   cardsClone:[],
-  cardsShow:[],
-  cardsSort:[],//Эксперементально
   idCards: [],
   victoryPoint:[],
   container: document.querySelector(".app"), //Основной контейнер
@@ -35,64 +33,70 @@ export const application: any = {
     }
   },
 
-  easyLevelScreen: function () {
+  easyLevelScreen: function () {    
+    let cardsSort = []
     for (let i = 15; i < this.cards.length; i++) {
-      this.cardsClone = this.cards[i]
+      cardsSort.push(this.cards[i])
+      this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)
      setTimeout(() => {
        clone.children[1].classList.remove("back_rotate")
    }, 5000)
-     this.cardsShow = clone
-     this.cardsScreen.appendChild(
-       this.cardsClone
-     )
-     this.cardsScreen.prepend(
-       this.cardsShow
-     )         
+     cardsSort.push(clone)
    }     
+   const shuffleCards = [...cardsSort].sort( () => 0.5 - Math.random());
+   console.log(shuffleCards)
+   for (let i = 0; i < shuffleCards.length; i++) {
+    this.cardsScreen.appendChild(shuffleCards[i]
+    )     
+   }
    this.container.appendChild(
      this.cardsScreen
    )       
   },  
 
   normalLevelScreen: function () {
+    let cardsSort = []
     for (let i = 12; i < this.cards.length; i++) {
-      this.cardsClone = this.cards[i]
+      cardsSort.push(this.cards[i])
+      this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)
      setTimeout(() => {
        clone.children[1].classList.remove("back_rotate")
    }, 5000)
-     this.cardsShow = clone
-     this.cardsScreen.appendChild(
-       this.cardsClone
-     )
-     this.cardsScreen.prepend(
-       this.cardsShow
-     )         
+     cardsSort.push(clone)
    }     
+   const shuffleCards = [...cardsSort].sort( () => 0.5 - Math.random());
+   console.log(shuffleCards)
+   for (let i = 0; i < shuffleCards.length; i++) {
+    this.cardsScreen.appendChild(shuffleCards[i]
+    )     
+   }
    this.container.appendChild(
      this.cardsScreen
    )       
-  },
+  },  
 
   hardLevelScreen: function () {
+    let cardsSort = []
     for (let i = 9; i < this.cards.length; i++) {
-      this.cardsClone = this.cards[i]
+      cardsSort.push(this.cards[i])
+      this.cardsClone=this.cards[i]
      let clone = this.cardsClone.cloneNode(true)
      setTimeout(() => {
        clone.children[1].classList.remove("back_rotate")
    }, 5000)
-     this.cardsShow = clone
-     this.cardsScreen.appendChild(
-       this.cardsClone
-     )
-     this.cardsScreen.prepend(
-       this.cardsShow
-     )         
+     cardsSort.push(clone)
    }     
+   const shuffleCards = [...cardsSort].sort( () => 0.5 - Math.random());
+   console.log(shuffleCards)
+   for (let i = 0; i < shuffleCards.length; i++) {
+    this.cardsScreen.appendChild(shuffleCards[i]
+    )     
+   }
    this.container.appendChild(
      this.cardsScreen
    )       
-  },
+  },  
 }
 

@@ -6,9 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write ./static/",
-        "lint:js": "eslint ./static/js/**/*.js --fix",
-        "lint:css": "stylelint ./static/**/*.css --fix",
-        "lint": "npm run lint:js && npm run lint:css",
+        "lint:css": "stylelint ./src/**/*.css --fix",
+        "lint": "npm run lint:ts && npm run lint:css",
         "lint:ts":"tsc  --noEmit",
         "prepare": "husky install",
         "build": "cross-env NODE_ENV=production webpack",
