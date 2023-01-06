@@ -1,14 +1,5 @@
 # Карточная игра :black_joker:
 ![npm](https://img.shields.io/npm/v/npm?color=green)
-___
-### Для запуска режима сборки production версии
-```
-npm run build
-```
-### Для старта игры
-```
-npm run start
-```
 ## Как играть:question:
 + Перед вами окно выбора уровня сложности, выбираем нужный и нажимаем **Старт**:loudspeaker:
   ![choice_level](src/static/img/cards/Card_game%20-%20Google%20Chrome%202023-01-05%2013.48.20.png)
